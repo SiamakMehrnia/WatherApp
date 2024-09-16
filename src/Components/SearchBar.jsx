@@ -47,7 +47,7 @@ function SearchBar({ onSearch }) {
           placeholder="Enter city or ZIP code"
           className="flex-grow border p-2 rounded-l"
         />
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded-r">
+        <button type="submit" className="bg-gradient-to-r  text-white border p-2 rounded-r ">
           Search
         </button>
       </form>
