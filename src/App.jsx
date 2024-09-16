@@ -1,6 +1,6 @@
 // src/App.jsx
-import React from 'react';
-import Weather from '/Users/sayanb3/Projects/Weatherapp/src/Components/Weather.jsx';
+import React from "react";
+import Weather from "./components/Weather";
 
 function App() {
   return (
