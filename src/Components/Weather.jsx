@@ -1,6 +1,6 @@
-// src/Weather.jsx
 import React, { useState, useEffect } from "react";
 import LoadingSpinner from "./LoadingSpinner"; //import component
+import SearchBar from "./SearchBar";
 
 function Weather() {
   const [location, setLocation] = useState("New York"); // Default location
@@ -35,12 +35,8 @@ function Weather() {
     fetchWeather();
   }, [location]);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    const loc = e.target.elements.location.value.trim();
-    if (loc) {
-      setLocation(loc);
-    }
+  const handleSearch = (loc) => {
+    setLocation(loc);
   };
 
   if (error) {
@@ -71,18 +67,8 @@ function Weather() {
   } = weatherData;
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
-      <form onSubmit={handleSearch} className="mb-4 flex">
-        <input
-          type="text"
-          name="location"
-          placeholder="Enter location"
-          className="flex-grow border p-2 rounded-l"
-        />
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded-r">
-          Search
-        </button>
-      </form>
+    <div className="max-w-md mx-auto mt-10 p-6 text-gray-300 bg-white rounded-xl shadow-md">
+      <SearchBar onSearch={handleSearch} />
 
       <div className="text-center">
         <h1 className="text-2xl font-bold">
