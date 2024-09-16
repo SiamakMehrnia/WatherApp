@@ -53,7 +53,7 @@ function Weather() {
   } = weatherData;
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
+    <div className="max-w-md mx-auto   p-6  rounded-xl shadow-md text-zinc-50 bg-neutral-700 w-2/4">
       <SearchBar onSearch={handleSearch} />
 
       <div className="text-center">
