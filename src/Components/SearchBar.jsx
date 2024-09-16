@@ -45,7 +45,7 @@ function SearchBar({ onSearch }) {
           value={query}
           onChange={handleInputChange}
           placeholder="Enter city or ZIP code"
-          className="flex-grow border p-2 rounded-l"
+          className="flex-grow border p-2 rounded-l outline-none text-black"
         />
         <button type="submit" className="bg-gradient-to-r  text-white border p-2 rounded-r ">
           Search
