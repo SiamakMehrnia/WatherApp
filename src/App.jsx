@@ -1,10 +1,10 @@
 // src/App.jsx
 import React from "react";
-import Weather from "./components/Weather";
+import Weather from "./Components/Weather";
 
 function App() {
   return (
-    <div className="min-h-screen  flex items-center justify-center">
+    <div className="min-h-screen">
       <Weather />
     </div>
   );
