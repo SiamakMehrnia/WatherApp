@@ -61,12 +61,13 @@ function Weather() {
     location: { name, country },
   } = weatherData;
 
-  const bgIcon = weatherData?.current?.condition?.code
-    ? weatherMapping[weatherData.current.condition.code].lottie
-    : icon;
-  const bg = weatherData?.current?.condition?.code
-    ? weatherMapping[weatherData.current.condition.code].bgColor
-    : "white";
+  const bgIcon = weatherData?.current?.condition?.code && weatherMapping[weatherData.current.condition.code]
+  ? weatherMapping[weatherData.current.condition.code].lottie
+  : weatherData?.current?.condition?.icon; 
+
+const bg = weatherData?.current?.condition?.code && weatherMapping[weatherData.current.condition.code]
+  ? weatherMapping[weatherData.current.condition.code].bgColor
+  : "gray"; 
 
   return (
     <div
